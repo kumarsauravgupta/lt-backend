@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lantern</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <a class="logo" href="#top"><span class="flame"></span>Lantern</a>
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#opportunities">Opportunities</a>
+    <a href="#hire">Smart hiring</a>
+    <a href="#profile">Profile</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <h1>Where students, colleges and industry meet.</h1>
+  <p>Learn the skills companies ask for, prove them with real work, and get found by people who are hiring.</p>
+  <div class="actions"><a class="btn" href="#dashboard">See the dashboard</a><a class="btn ghost" href="#opportunities">Browse internships</a></div>
+</section>
+
+<section id="dashboard">
+  <h2>One dashboard, three views</h2>
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-view="student" role="tab">Student</button>
+    <button class="tab" data-view="college" role="tab">College</button>
+    <button class="tab" data-view="industry" role="tab">Industry</button>
+  </div>
+
+  <div class="view" id="v-student">
+    <div class="grid2">
+      <div class="panel wide">
+        <h3>GitHub contributions</h3>
+        <div id="heat" class="heat" aria-label="Contribution graph"></div>
+        <p class="muted small"><span id="total"></span> contributions in the last year</p>
+      </div>
+      <div class="panel">
+        <h3>LeetCode streak</h3>
+        <p class="big"><span id="streak">0</span> days</p>
+        <p class="muted small">Solved today: <b>2</b> &middot; Total solved: <b>312</b></p>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Best-fit companies for your skills</h3>
+      <div id="matches" class="rows"></div>
+    </div>
+  </div>
+
+  <div class="view" id="v-college" hidden>
+    <div class="panel">
+      <h3>Student performance</h3>
+      <div class="scroll"><table>
+        <thead><tr><th>Student</th><th>Branch</th><th>Commits (30d)</th><th>LeetCode</th><th>Hackathons</th><th>Readiness</th></tr></thead>
+        <tbody id="students"></tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <div class="view" id="v-industry" hidden>
+    <div class="panel">
+      <h3>Candidates with the skills you need</h3>
+      <div class="filters" id="skillChips"></div>
+      <div id="cands" class="rows"></div>
+    </div>
+  </div>
+</section>
+
+<section id="opportunities">
+  <h2>Opportunities</h2>
+  <div class="grid2">
+    <div class="panel"><h3>Internships</h3><div id="interns" class="rows"></div></div>
+    <div class="panel"><h3>Hackathons &amp; tech news</h3><div id="events" class="rows"></div></div>
+  </div>
+</section>
+
+<section id="hire">
+  <h2>Smart hiring filter</h2>
+  <p class="lead">AI screens applicants on verified work, not keywords, so interviewers meet people who can do the job.</p>
+  <div class="panel">
+    <div class="tabs">
+      <button class="tab on" data-sector="all">All</button>
+      <button class="tab" data-sector="govt">Government</button>
+      <button class="tab" data-sector="private">Private</button>
+    </div>
+    <div id="vac" class="rows"></div>
+  </div>
+</section>
+
+<section id="profile">
+  <h2>Profile</h2>
+  <div class="panel profile">
+    <div>
+      <h3>Saurav</h3>
+      <p class="muted">CSE student &middot; aspiring software engineer</p>
+      <p>Building skills for campus placements at top tech companies. Open to internships and hackathon teams.</p>
+    </div>
+    <ul class="links">
+      <li><a href="resume.pdf" download>Resume (PDF)</a></li>
+      <li><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://leetcode.com/your-username" target="_blank" rel="noopener">LeetCode</a></li>
+      <li><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://x.com/your-username" target="_blank" rel="noopener">X / Twitter</a></li>
+      <li><a href="mailto:you@example.com">Email me</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>Lantern &middot; light the way from campus to career</footer>
+<script src="app.js"></script>
+</body>
+</html>
