@@ -21,7 +21,7 @@ async function seed() {
 
   const users = await User.insertMany([
     { name: "Saurav", email: "saurav@lantern.dev", password, role: "student" },
-    { name: "Aarav Mehta", email: "aarav@lantern.dev", password, role: "student" },
+    { name: "dev gupta", email: "dev gupta@lantern.dev", password, role: "student" },
     { name: "Diya Sharma", email: "diya@lantern.dev", password, role: "student" },
     { name: "Lantern College", email: "college@lantern.dev", password, role: "college" },
     { name: "Lantern Industry", email: "industry@lantern.dev", password, role: "industry" }
@@ -42,7 +42,7 @@ async function seed() {
       stats: { commits30d: 47, leetcodeSolved: 312, hackathons: 1, readiness: 72 }
     },
     {
-      user: byEmail("aarav@lantern.dev"),
+      user: byEmail("dev gupta@lantern.dev"),
       branch: "CSE",
       college: "Example Institute",
       year: 3,
